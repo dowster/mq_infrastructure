@@ -1,0 +1,6 @@
+[submodule "zookeeper_server"]
+	path = zookeeper_server
+	url = https://github.com/dowster/zookeeper_server.git
+[submodule "kafka_server"]
+	path = kafka_server
+	url = https://github.com/dowster/kafka_server.git
