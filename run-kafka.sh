@@ -13,16 +13,6 @@ docker run -d --name kafka0 --network kafka-net --interactive \
    --env KAFKA_BROKER_ID=0 \
    --env KAFKA_PORT=9092 \
    dowster/kafka_server
-docker run -d --name kafka1 --network kafka-net --interactive \
-   --env ZOOKEEPER_IP=zookeeper \
-   --env KAFKA_BROKER_ID=1 \
-   --env KAFKA_PORT=9093 \
-   dowster/kafka_server
-docker run -d --name kafka2 --network kafka-net --interactive \
-   --env ZOOKEEPER_IP=zookeeper \
-   --env KAFKA_BROKER_ID=2 \
-   --env KAFKA_PORT=9094 \
-   dowster/kafka_server
 
 docker run --rm --network kafka-net dowster/kafka_server \
    kafka-topics.sh --create --topic test --replication-factor 1 --partitions 1 --zookeeper zookeeper:2181
